@@ -1,0 +1,35 @@
+{
+	"name": "gacek85/collection-iterator",
+	"description": "Helps iterating big sets of data",
+	"authors": [
+		{
+			"name": "Maciej Garycki",
+			"email": "maciekgarycki@gmail.com"
+		}
+	],
+	
+	"require": {
+		"php": ">=5.4",
+		"filp/whoops": "~2.1",
+        "doctrine/orm": "^2.5"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~4.8.0",
+        "fzaninotto/Faker": "~1.6.0"
+	},
+    "config": {
+        "bin-dir": "bin/"
+    },
+	"autoload": {
+		"psr-4": {
+			"Gacek85\\Collection\\": "src/Collection/"
+		}
+	},
+    "autoload-dev": {
+        "psr-4": {
+            "Gacek85\\Collection\\Test\\": "test/Collection/Test/"
+        }
+    },
+	"target-dir": "Gacek85/Collection",
+	"minimum-stability": "dev"
+}

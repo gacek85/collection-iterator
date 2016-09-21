@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="test/bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="Collection Iterator Tests Suite">
+            <directory>test/Collection/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src/Collection/</directory>
+            <exclude>
+                <directory>./docs</directory>
+                <directory>./examples</directory>
+                <directory>./test</directory>
+                <directory>./vendor</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
