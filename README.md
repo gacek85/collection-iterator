@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/gacek85/collection-iterator.svg?branch=master)](https://travis-ci.org/gacek85/collection-iterator)
+
 #Collection Iterator
 
 An implementation of `SPL's` `Iterator` for traversing large collections of data minimising the risk of memory limit exhaustion. Consists of an iterator service class `Gacek85\Collection\CollectionIterator` and an interface `Gacek85\Collection\IterableDataProvider` for a provider that will be providing chunks of data to the iterator service.
@@ -15,6 +17,8 @@ setPerPage(int $perPage): CollectionIterator // Sets the number of items loaded 
 count(): int	// Returns the total count of the elements that will be traversed
 ```
 
+Other public methods are `Iterator` specific API.
+
 ###IterableDataProvider
 
 ``` php
@@ -31,7 +35,7 @@ getChunk(int $offset, int $limit): array|Iterator //Returns the chunk of data fr
 $provider = new \My\Provider(); // An implementation of Gacek85\Collection\IterableDataProvider
 $iterator = new \Gacek85\Collection\CollectionIterator($provider);
 
-foreach ($iterator as $item) {
+foreach ($iterator as $k => $item) {
 	// Do your stuff here with the item
 }
 ```

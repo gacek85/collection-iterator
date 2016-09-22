@@ -21,8 +21,9 @@ class CollectionIteratorTest extends PHPUnit_Framework_TestCase
         list($rawArray, $dataProvider) = Factory::getMock(self::TEST_LENGTH);
         $iterator = new CollectionIterator($dataProvider);
         $counter = 0;
-        foreach ($iterator as $value) {
-            $this->assertEquals($rawArray[$counter++], $value);
+        foreach ($iterator as $k => $value) {
+            $this->assertEquals($rawArray[$counter], $value);
+            $this->assertEquals($counter++, $k);
         }
     }
     

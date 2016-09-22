@@ -97,11 +97,11 @@ class CollectionIterator implements Iterator, Countable
     /**
      * Interface method, not implemented
      * 
-     * @throws      LogicException     Is thrown whenever that method is executed
+     * @return      int
      */
     public function key()
     {
-        throw new LogicException("This iterator is not able to detect current key!");
+        return $this->currentIndex;
     }
 
     
