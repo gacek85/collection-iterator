@@ -4,7 +4,6 @@ namespace Gacek85\Collection;
 use Countable;
 use Gacek85\Collection\IterableDataProvider;
 use Iterator;
-use LogicException;
 
 /**
  *  Enables iterating over big sets of data loaded in chunks
