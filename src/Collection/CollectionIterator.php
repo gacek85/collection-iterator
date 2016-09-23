@@ -184,6 +184,9 @@ class CollectionIterator implements Iterator, Countable
         if ($count === 0) {
             return 0;
         }
+        if ($count <= $perPage) {
+            return 1;
+        }
         
         $mod = $count % $perPage;
         $pagesCount = $count / ($count - $mod);
