@@ -30,6 +30,5 @@
             "Gacek85\\Collection\\Test\\": "test/Collection/Test/"
         }
     },
-	"target-dir": "Gacek85/Collection",
 	"minimum-stability": "dev"
 }
